@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jan 13 19:12:45 2021
+# Process ID: 11452
+# Current directory: D:/Project/Verilog_VGA/Project/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36904 D:\Project\Verilog_VGA\Project\project_1\project_1.xpr
+# Log file: D:/Project/Verilog_VGA/Project/project_1/vivado.log
+# Journal file: D:/Project/Verilog_VGA/Project/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Project/Verilog_VGA/Project/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset blk_mem_gen_0 D:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name blk_mem_gen_0 -dir d:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip
+set_property -dict [list CONFIG.Write_Width_A {12} CONFIG.Write_Depth_A {96000} CONFIG.Read_Width_A {12} CONFIG.Enable_A {Always_Enabled} CONFIG.Write_Width_B {12} CONFIG.Read_Width_B {12} CONFIG.Load_Init_File {true} CONFIG.Coe_File {D:/Project/Verilog_VGA/Project/Integrated.coe}] [get_ips blk_mem_gen_0]
+generate_target {instantiation_template} [get_files d:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  d:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all blk_mem_gen_0] }
+export_ip_user_files -of_objects [get_files d:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci]
+launch_runs blk_mem_gen_0_synth_1 -jobs 8
+wait_on_run blk_mem_gen_0_synth_1
+wait_on_run blk_mem_gen_0_synth_1
+export_simulation -of_objects [get_files d:/Project/Verilog_VGA/Project/project_1/project_1.srcs/sources_1/ip/blk_mem_gen_0_1/blk_mem_gen_0.xci] -directory D:/Project/Verilog_VGA/Project/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir D:/Project/Verilog_VGA/Project/project_1/project_1.ip_user_files -ipstatic_source_dir D:/Project/Verilog_VGA/Project/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Project/Verilog_VGA/Project/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/Project/Verilog_VGA/Project/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/Project/Verilog_VGA/Project/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/Project/Verilog_VGA/Project/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Project/Verilog_VGA/Project/project_1/project_1.runs/impl_1/rhinos_Project_VGA.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Project/Verilog_VGA/Project/project_1/project_1.runs/impl_1/rhinos_Project_VGA.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Project/Verilog_VGA/Project/project_1/project_1.runs/impl_1/rhinos_Project_VGA.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jan 13 19:48:27 2021
+# Process ID: 17760
+# Current directory: D:/Project/Verilog_Sound/MyCode_withChoosing/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log rhinos_speaker.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source rhinos_speaker.tcl -notrace
+# Log file: D:/Project/Verilog_Sound/MyCode_withChoosing/project_1/project_1.runs/impl_1/rhinos_speaker.vdi
+# Journal file: D:/Project/Verilog_Sound/MyCode_withChoosing/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source rhinos_speaker.tcl -notrace
